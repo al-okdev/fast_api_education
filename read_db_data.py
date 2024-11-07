@@ -30,7 +30,7 @@ class LiadReturn(BaseModel):
     
 @app.get("/liad")
 async def liad_list():
-    query = ("SELECT id,title FROM profi LIMIT 15")
+    query = ("SELECT id,title FROM profi")
     values = {}
     try:
         result = await database.fetch_one(query=query, values=values)
